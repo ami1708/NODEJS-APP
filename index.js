@@ -1,31 +1,14 @@
-
-// setting up our express server
-const express = require('express');
-// initialising our app
+const express = require('express')
 const app = express();
-const port = 9000;
-// connecting to the database
-const db=require('./config/mongoose');
-const List=require('./models/model.js');
-
-// setting up our home controller
+const port = 8000;
 
 
 
-// setting up our view engine
-app.set('view engine','ejs')
-app.set('views', './views');
 
-// setting up middlewares
-app.use(express.urlencoded());
-app.use(express.static('assets'));
 
-// founded our server here
-app.listen(port,function(err){
+app.listen(function(err){
     if(err){
-        console.log('Error in running the server',err)
-
+        console.log('server is giving error:',err)
     }
-    console.log('Sever is up and running at port:',port)
-});
-
+    console.log('server is up and running at port:',port)
+})
