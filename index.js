@@ -1,15 +1,11 @@
 const express = require('express');
 const app = express();
 const port = 8000;
-//requiring the layouts
-const expressLayouts = require('express-ejs-layouts')
-//use layouts
-app.use(expressLayouts);
-// use express router
-
+const path = require('path');
 //use static files
 app.use(express.static('./assets'));
 // /connecting to database
+app.use(express.urlencoded({extended:true})) //req.body encoded
 const db = require('./config/mongoose');
 
 //using routes
