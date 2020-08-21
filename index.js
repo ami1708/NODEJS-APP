@@ -9,7 +9,7 @@ app.use(express.urlencoded({extended:true})) //req.body encoded
 const db = require('./config/mongoose');
 
 //using routes
-app.use('/', require('./routes'));
+app.use(require('./routes/todo_route'));
 //use view engine
 app.set('view engine','ejs')
 app.set('views','./views')
