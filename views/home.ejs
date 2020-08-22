@@ -2,14 +2,92 @@
 <html>
     <head>
         <title>
-<% title %>
+            TO-DO-APP
         </title>
-        <link rel="stylesheet" type="text/css" href="\css\layouts.css">
+        <!-- font awesome is imported -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+        <!-- //css is added // -->
+        <link rel="stylesheet" type="" href="/css/layout.css">
+
     </head>
     <body>
+        <div id = "app-container">
+            <div id = "List-heading">
+                <div id = "To-do-head"></div>
+            </div>
+<!-- creating the form -->
+<!-- to pass the data to the server -->
+<form action="/Todolist" method="POST">
+<div class = "description">
+    <h3 id = "desc">DESCRIPTION</h3>
+    <input type="text" name = "description" placeholder="Write what you want to do" id = "Description" required>
 
-        <h1>
-            Amisha to do / <%= title %>
-        </h1>
+</div>
+<div class="category-date">
+    <div id=category>
+        <h3 id = "cate">CATEGORY
+</h3>
+  <!-- drop down list -->
+  <select name="category" id="options" required>
+    <option value="" disabled selected>Choose a Category</option>
+    <option value="Work">Work</option>
+    <option value="Personal">Personal</option>
+    <option value="School">School</option>
+    <option value="Cleaning">Cleaning</option>
+    <option value="Others">Others</option>
+    </select>
+    </div>
+     <!-- date div tag -->
+     <div id="date">
+         <h3 id = "due"> DUE-DATE</h3>
+         <input type="date" name="date" id="Date" required >
+         </div>
+         <div id = "buttons">
+            <button type="submit" id="Add-button"><i class="fas fa-plus" style="position: relative; right:5%;"></i>ADD TASK</button>
+         </div>
+
+</form>
+<!-- ALL the lists item -->
+<div id="All-lists">
+<form action="/delete-todo" method="GET">
+    <ul style="margin:0">
+        <!-- Unordered list is used -->
+        <% for (let i of Todo_List){%>
+            <label for="list"></label>
+            <li id="list"><input type="checkbox" name="check"
+                class="CHECKBOX" value='{"id":"<%=i._id%>"}'>}
+                <div id="list-items">
+                    <h3 style="margin:0;margin-bottom:0.8%;
+                    color:brown;font-size: 1.5rem;"
+                     class="about-desc">
+                        <%= i.description%>
+                    </h3>
+                    <span><i class="fas fa-calendar-alt">
+                    </i>&nbsp;<span class="about-date">
+                        <%= i.date%></span></span>
+                </div>
+                <div class="Category-type">
+                    <p style="margin:0;margin-top:28%;font-family:sans-serif;
+                    font-size: 1rem;font-weight:bold;color:rgb(185, 13, 70)">
+                        <%= i.category%>
+                    </p>
+                </div>
+            </li>
+            <%}%>
+    </ul>
+    <button id="Delete-button" type="submit">
+        <i class="fas fa-trash-alt"></i>DELETE TASKS</button>
+
+</form>
+</div>
+        </div>
+ <!-- imported the javascript file and also the jquery library -->
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script type="text/javascript " src="/js/home.js">
+
+
     </body>
+
+
 </html>
