@@ -1,4 +1,242 @@
 body{
     margin: 0;
-    background-image: url("https://images.pexels.com/photos/3243/pen-calendar-to-do-checklist.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+    background-size: cover;
+    text-align:center;
+  background-position: center;
+    background-attachment: fixed;
+    background-image: url("https://images.pexels.com/photos/414645/pexels-photo-414645.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260")
+}
+/* for the whole app container */
+#Todolist{
+    height: auto;
+    width: 60%;
+    margin-left: 20%;
+    background-color:lightgoldenrodyellow
+}
+/* for the heading of the app */
+#List-heading {
+    height: 105px;
+    width: 100%;
+    border-bottom: 1.5px solid lightgrey;
+    text-align: center;
+}
+/* for the image and the content of the heading */
+
+#List-heading #To-do-head {
+    height: 100%;
+    width: 15%;
+    margin-left: 43%;
+    background-image: url("https://i.pinimg.com/originals/7e/28/3b/7e283bffa0ce297245f0b9a49ba3d403.jpg");
+    background-size: cover;
+}
+/* the container */
+.description{
+        height: 85px;
+        width: 100%;
+        border-bottom: 1.5px solid lightgrey;
+        padding-top: 20px;
+
+}
+/* for the description heading*/
+#desc{
+    color:grey;
+    margin:0;
+     margin-left:3%;
+     font-family: sans-serif;
+    font-weight: 600;
+    font-size:1.4rem;
+}
+/* for the description form */
+#Description {
+    height: 60%;
+    width: 70%;
+    margin-left: 3%;
+    font-size: 1.4rem;
+    border: 0;
+}
+.description:hover {
+    background-color:lightsalmon;
+}
+    /*focus outline */
+
+    input:focus,
+    select:focus,
+    button:focus {
+        outline: none;
+    }
+    /* for category and date container */
+.category-date{
+    display: flex;
+    flex-wrap:wrap;
+    height: 105px;
+   width: 100%;
+border-bottom: 1.5px solid lightsalmon
+
+}
+
+#category {
+    height: 100%;
+    width: 49.5%;
+    border-right: 1.5px solid lightsalmon;
+}
+/* for the date tag */
+
+#date {
+    height: 100%;
+    width: 50%;
+}
+
+#options {
+    height: 55%;
+    width: 90%;
+    margin-left: 4.9%;
+    font-size: 1.4rem;
+    border: 0;
+}
+
+#options:hover{
+    background-color: lightgoldenrodyellow;
+}
+#Date:hover {
+    background-color:lightsalmon;
+}
+/* for the date form input */
+#Date {
+    height: 55%;
+    width: 90%;
+    margin-left: 4.9%;
+    font-size: 1.4rem;
+    border: 0;
+}
+
+/* 
+for the date container */
+#due{
+    margin:0;
+     margin-left:4.9%;
+     color:grey;
+     font-family: sans-serif;
+    font-weight: 600;
+     font-size:1.4rem;margin-top:2%;
+}
+/* for the categoy conatiner */
+#cate{
+    margin:0;
+     margin-left:4.9%;
+     color:grey;
+     font-family: sans-serif;
+    font-weight: 600;
+     font-size:1.4rem;margin-top:2%;
+}
+#buttons {
+    height: 160px;
+    width: 100%;
+    background-color:lightgoldenrodyellow;
+    border-bottom: 1.5px solid lightgrey;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+/* add button */
+
+#Add-button {
+    margin-left: 15%;
+    margin-right: 1%;
+    height: 56%;
+    width: 25%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.705);
+    font-family: sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 0;
+}
+/* delete button */
+
+#Delete-button {
+    height: 15%;
+    width: 14.2%;
+    color: white;
+    background-color: lightsalmon;
+    font-family: sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 15.5%;
+    margin-left: 40%;
+   
+}
+/* all the list items */
+
+#All-lists {
+    height: auto;
+    margin-left:0;
+    width: 100%;
+
+}
+
+#list {
+    list-style: none;
+    /* margin-left: 0px; */
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1.5px solid gray;
+    height: 105px;
+    width: 100%;
+    position: relative;
+    left:-20px;
+    
+    background-color: lightgoldenrodyellow;
+}
+/* For checkbox input */
+
+input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    margin-top: 2%;
+    margin-left: 5%;
+    cursor: pointer;
+}
+
+input[type='checkbox']:checked:after {
+    background: rgb(5, 240, 161);
+    content: '\2714';
+    color: #fff;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    font-size: 23px;
+    text-align: center;
+}
+
+#list-items {
+    margin-left: auto;
+    background-color: lightgoldenrodyellow;
+    color: gray;
+    font-family: sans-serif;
+    font-weight: 300;
+    margin-top: 1.5%;
+    height: auto;
+    width: 50%;
+}
+
+.Category-type {
+    height: 62%;
+    width: 14%;
+    text-align: center;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSuMyyDZVOP70fIjk0PvGV0AP6NDHhIMR8aow&usqp=CAU");
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    margin-top: 1%;
+    margin-left: 18%;
 }
