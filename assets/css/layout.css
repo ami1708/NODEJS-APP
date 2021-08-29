@@ -189,11 +189,11 @@ for the date container */
     /* margin-left: 0px; */
     display: flex;
     flex-wrap: wrap;
-    border-bottom: 1.5px solid gray;
-    height: 105px;
-    width: 100%;
+    border-bottom: 2px solid gray;
+    height: 90px;
+    width: 102.5%;
     position: relative;
-    left:-20px;
+    left:-30px;
     
     background-color: lightgoldenrodyellow;
 }

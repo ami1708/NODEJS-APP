@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/ami1708/TO-DO-APP#readme",
   "dependencies": {
-    "ejs": "^3.1.5",
+    "npm": "^3.1.5",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0",
     "mongoose": "^5.10.0"
